@@ -1,9 +1,9 @@
 // U67724813 
 // Alaina Musselwhite
 
-import { calculateInterest } from 'interestRate.js';
-import { calculateLoanPayment } from 'loanPayment.js';
-import { calculateInvestmentReturn } from 'investmentReturn.js';
+import { calculateInterest } from './interestRate.js';
+import { calculateLoanPayment } from './loanPayment.js';
+import { calculateInvestmentReturn } from './investmentReturn.js';
 
 // Interest Rate
 document.getElementById('calculate-interest').addEventListener('click', () => {
@@ -11,7 +11,6 @@ document.getElementById('calculate-interest').addEventListener('click', () => {
     const rate = parseFloat(document.getElementById('interest-rate').value);
     const time = parseFloat(document.getElementById('interest-time').value);
     if (isNaN(principal) || isNaN(rate) || isNaN(time)) {
-        //Alerts
         alert("Please enter valid numbers");
         return;
     }
@@ -25,7 +24,6 @@ document.getElementById('calculate-loan').addEventListener('click', () => {
     const rate = parseFloat(document.getElementById('loan-rate').value);
     const years = parseFloat(document.getElementById('loan-years').value);
     if (isNaN(principal) || isNaN(rate) || isNaN(years)) {
-        //Alerta
         alert("Please enter valid numbers");
         return;
     }
@@ -40,7 +38,6 @@ document.getElementById('calculate-investment').addEventListener('click', () => 
     const timesCompounded = parseFloat(document.getElementById('investment-times-compounded').value);
     const years = parseFloat(document.getElementById('investment-years').value);
     if (isNaN(principal) || isNaN(rate) || isNaN(timesCompounded) || isNaN(years)) {
-        //Alerts
         alert("Please enter valid numbers");
         return;
     }
